@@ -1,7 +1,8 @@
+import math
 def compute_area_of_circle(radius):
-	pi = 3.14
-	area = pi * radius * radius
-	return area
+	if radius < 0:
+		raise ValueError("Radius cannot be negative")
+	return math.pi * (radius ** 2)
 
 radius1 = 30
 area1 = compute_area_of_circle(radius1)
